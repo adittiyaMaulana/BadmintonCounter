@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/teamList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textViewTeamA"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Team A"
+            android:textSize="30dp" />
+
+        <TextView
+            android:id="@+id/textViewTeamB"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Team B"
+            android:textSize="30dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/score"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/teamList">
+
+        <TextView
+            android:id="@+id/teamA"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="0"
+            android:textSize="80sp"
+            app:layout_constraintStart_toStartOf="@id/textViewTeamA"
+            app:layout_constraintEnd_toEndOf="@id/textViewTeamA"
+            app:layout_constraintTop_toBottomOf="@id/textViewTeamA"/>
+
+        <TextView
+            android:id="@+id/teamB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="0"
+            android:textSize="80sp"
+            app:layout_constraintStart_toStartOf="@id/textViewTeamB"
+            app:layout_constraintEnd_toEndOf="@id/textViewTeamB"
+            app:layout_constraintTop_toBottomOf="@id/textViewTeamB"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/plus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/score">
+
+        <Button
+            android:id="@+id/plusTeamA"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="+"
+            android:textSize="30dp"/>
+        <Button
+            android:id="@+id/plusTeamB"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="+"
+            android:textSize="30dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/minus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/plus">
+
+        <Button
+            android:id="@+id/minusTeamA"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="-"
+            android:textSize="30dp"/>
+        <Button
+            android:id="@+id/minusTeamB"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="-"
+            android:textSize="30dp"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/resetScore"
+        android:layout_width="229dp"
+        android:layout_height="61dp"
+        android:text="Reset"
+        android:textSize="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/minus" />
+</androidx.constraintlayout.widget.ConstraintLayout>
